@@ -1,29 +1,14 @@
 import { useState } from 'react'
-import './App.css'
+import Landing from './components/Landing'
+import Library from './components/Library'
 
 function App() {
-  const [entered, setEntered] = useState(false)
+  const [screen, setScreen] = useState('landing')
 
   return (
-    <div className="landing">
-      <div className="petals-container">
-        {Array.from({ length: 18 }).map((_, i) => (
-          <div key={i} className={`petal petal-${i % 6}`} style={{
-            left: `${(i * 5.5 + 3)}%`,
-            animationDelay: `${i * 0.7}s`,
-            animationDuration: `${6 + (i % 4)}s`
-          }} />
-        ))}
-      </div>
-
-      <div className="landing-content">
-        <p className="subtitle">a library for the books that live in you</p>
-        <h1 className="title">the virtual library</h1>
-        <button className="enter-btn" onClick={() => setEntered(true)}>
-          enter the library
-        </button>
-        {entered && <p className="cat-whisper">the cat is watching you...</p>}
-      </div>
+    <div>
+      {screen === 'landing' && <Landing onEnter={() => setScreen('library')} />}
+      {screen === 'library' && <Library />}
     </div>
   )
 }

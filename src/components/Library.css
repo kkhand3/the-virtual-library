@@ -1,0 +1,93 @@
+.library-room {
+  height: 100vh;
+  width: 100vw;
+  background: #2d1f14;
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  grid-template-rows: 20px 1fr 80px;
+  overflow: hidden;
+}
+
+.ceiling {
+  grid-column: 1 / -1;
+  background: #1a0e08;
+  border-bottom: 3px solid #5a3820;
+}
+
+.floor {
+  grid-column: 1 / -1;
+  background: #3d2b1a;
+  border-top: 3px solid #5a3820;
+}
+
+.bookshelf {
+  background: #4a2e14;
+  border-right: 4px solid #5a3820;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 8px;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.bookshelf-right {
+  border-right: none;
+  border-left: 4px solid #5a3820;
+}
+
+.shelf-label {
+  color: #e8c89a;
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  font-style: italic;
+  text-align: center;
+  padding: 4px;
+  border-bottom: 1px solid #5a3820;
+  margin-bottom: 4px;
+}
+
+.shelf-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  padding: 0 4px;
+}
+
+.book {
+  width: 18px;
+  border-radius: 2px 2px 0 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.book:hover {
+  transform: translateY(-6px);
+}
+
+.shelf-plank {
+  height: 8px;
+  background: #5a3820;
+  border-radius: 1px;
+  margin: 0 -8px;
+}
+
+.center-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.desk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background: #5a3820;
+  border-radius: 4px;
+  border-top: 6px solid #6b4a28;
+}

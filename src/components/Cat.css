@@ -1,0 +1,25 @@
+.cat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.cat-svg {
+  width: 80px;
+  height: 128px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cat-svg:hover {
+  transform: translateY(-6px);
+}
+
+.cat-name {
+  color: #9a7050;
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  font-style: italic;
+}
